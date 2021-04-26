@@ -39,7 +39,8 @@ vignettes/*.pdf
 .Renviron
 
 # data
-data/
+data/*
+!data/data_migratory_landbirds_soib.csv
 # data/observations/
 # !data/observations/*.txt
 # data/output/
