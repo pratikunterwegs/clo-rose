@@ -1,4 +1,4 @@
-# test hexagonal binning of SWG obs
+# hexagonal binning of IEF obs
 library(data.table)
 library(sf)
 library(ggplot2)
