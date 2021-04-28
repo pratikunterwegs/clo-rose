@@ -16,6 +16,9 @@ data_count = data[, .N, by = c("scientific_name", "polygon")]
 data_sp_count = data[,.N, by = "scientific_name"]
 data_sp_count = merge(data_sp_count, soib, by = "scientific_name")
 
+# save
+fwrite(data_sp_count, file = "data/output/data_candidate_species.csv")
+
 # load grid
 grid = st_read("data/data_grid.gpkg")
 grid$polygon = seq(nrow(grid))
