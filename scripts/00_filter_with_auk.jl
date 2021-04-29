@@ -10,7 +10,7 @@ soib = CSV.read("data/data_migratory_landbirds_soib.csv", DataFrame)
 R"library(auk)"
 
 # get species of interest
-flyways = ["ief"]
+flyways = ["ief", "caf", "local"]
 for flyway in flyways
   soi = filter(row -> occursin(flyway, row.flyway), soib)
   soi = soi.scientific_name
@@ -30,7 +30,6 @@ for flyway in flyways
   ebd_filtered = auk_filter(
     ebd_filters,
     file = file_output,
-    overwrite = FALSE
+    overwrite = TRUE
   )"
 end
-
