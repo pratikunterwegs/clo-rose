@@ -4,8 +4,9 @@ author: Pratik Gupte
 date: May, 2021
 output: 
   pdf_document: 
-    latex_engine: xelatex
-mainfont: Source Serif Pro
+    latex_engine: pdflatex
+    includes:
+      in_header: "latex/preamble.tex"
 editor_options:
   chunk_output_type: console
 ---
@@ -22,14 +23,16 @@ data = lapply(data, fread)
 ```{r, echo=FALSE}
 knitr::kable(data[[1]][, c("Scientific name", "Common name",
                            "Total observations (2015-2019)")],
-             caption = "Candidate species that primarily migrate along\\ 
+             caption = "Candidate species that are understood to \\
+             primarily migrate along\\ 
              the Central Asian Flyway.")
 ```
 
 ```{r, echo=FALSE}
 knitr::kable(data[[2]][, c("Scientific name", "Common name",
                            "Total observations (2015-2019)")],
-             caption = "Candidate species that primarily migrate along\\ 
+             caption = "Candidate species that are expected to \\
+             primarily migrate along\\ 
              the potential Indo-European Flyway.")
 
 ```
@@ -37,6 +40,7 @@ knitr::kable(data[[2]][, c("Scientific name", "Common name",
 ```{r, echo=FALSE}
 knitr::kable(data[[3]][, c("Scientific name", "Common name",
                            "Total observations (2015-2019)")],
-             caption = "Candidate species that primarily migrate within the Indian subcontinent.")
+             caption = "Candidate species that are understood to \\
+             primarily migrate within the Indian subcontinent.")
 
 ```
