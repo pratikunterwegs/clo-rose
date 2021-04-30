@@ -39,5 +39,8 @@ vignettes/*.pdf
 .Renviron
 
 # data
-data/*
+data/*.txt
+data/output/*.txt
+data/*.gpkg
 !data/data_migratory_landbirds_soib.csv
+!data/output/*.csv
